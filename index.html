@@ -1,118 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LUMA — considered essentials, everyday style. Discover modern wardrobe staples." />
-  <title>LUMA — Everyday, Elevated</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10131c">
+  <title>TECHVAULT — Gear for What's Next</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="announcement">Complimentary shipping on orders over $75 <span>✦</span> Thoughtfully made, made to last</div>
-  <header class="site-header">
-    <button class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-    <a class="wordmark" href="#" aria-label="LUMA home">luma<span>.</span></a>
-    <nav class="main-nav" id="mainNav">
-      <a href="#shop">New arrivals</a>
-      <a href="#shop" data-filter-link="Clothing">Clothing</a>
-      <a href="#shop" data-filter-link="Accessories">Accessories</a>
-      <a href="#story">Our story</a>
+  <div class="announcement">NEXT-GEN TECH, DELIVERED FREE ON ORDERS OVER $100 <span>✦</span></div>
+  <header class="header">
+    <a class="brand" href="#"><span class="brand-mark">T</span> TECHVAULT<span class="brand-dot">.</span></a>
+    <nav id="nav" class="nav">
+      <a href="#shop">Shop all</a><a href="#shop" data-category-link="Audio">Audio</a><a href="#shop" data-category-link="Wearables">Wearables</a><a href="#shop" data-category-link="Accessories">Accessories</a>
     </nav>
     <div class="header-actions">
       <button class="icon-btn search-toggle" aria-label="Focus search">⌕</button>
-      <button class="icon-btn cart-toggle" aria-label="Open shopping bag">Bag <span class="cart-count">0</span></button>
+      <button class="bag-btn" id="openCart">Bag <span id="bagCount">0</span></button>
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle menu">☰</button>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">THE NEW EVERYDAY</p>
-        <h1>Less, but<br><em>better.</em></h1>
-        <p class="hero-description">A considered collection of timeless pieces designed to move with you, season after season.</p>
-        <a class="button button-dark" href="#shop">Explore the collection <span>↗</span></a>
-        <div class="hero-note"><span class="note-line"></span> Made for real life. Designed to last.</div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> THE FUTURE IS IN YOUR HANDS</div>
+        <h1>Better tech.<br><span>Better everyday.</span></h1>
+        <p>Thoughtfully selected gear that makes your everyday feel a little more extraordinary.</p>
+        <div class="hero-buttons"><a class="btn btn-light" href="#shop">Explore the collection <span>↗</span></a><a class="text-link" href="#story">Why TechVault <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><i>J</i><i>M</i><i>A</i><i>+</i></div><span><strong>12,000+</strong> happy tech lovers</span></div>
       </div>
-      <div class="hero-image-wrap">
-        <img class="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85" alt="Friends wearing relaxed contemporary fashion" />
-        <div class="image-stamp"><span>CURATED</span><strong>01 / 26</strong></div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1100&q=90" alt="Premium wireless headphones" class="hero-product">
+        <div class="float-card"><span class="float-icon">✦</span><div><b>Sound, reimagined.</b><small>Immersive audio experience</small></div></div>
+        <div class="hero-tag">EDITOR'S PICK <span>01 / 04</span></div>
       </div>
-      <div class="hero-index">L / 001</div>
+      <div class="hero-bottom"><span>DESIGNED FOR YOUR WORLD</span><span>SCROLL TO DISCOVER ↓</span><span>EST. 2024 · BUILT FOR TOMORROW</span></div>
     </section>
 
-    <section class="benefits" aria-label="Our promises">
-      <div><span class="benefit-icon">✳</span><span>Thoughtful materials</span></div>
-      <div><span class="benefit-icon">◌</span><span>Made to wear on repeat</span></div>
-      <div><span class="benefit-icon">↗</span><span>Easy, considered design</span></div>
+    <section class="trust-strip">
+      <div><span>↗</span><p><b>Free shipping</b><small>On orders over $100</small></p></div>
+      <div><span>◇</span><p><b>30-day returns</b><small>Try it, love it, or return it</small></p></div>
+      <div><span>⌁</span><p><b>Quality checked</b><small>Only gear we'd use ourselves</small></p></div>
+      <div><span>♡</span><p><b>Real human support</b><small>Here when you need us</small></p></div>
     </section>
 
-    <section class="shop-section section-shell" id="shop">
-      <div class="section-heading">
-        <div><p class="eyebrow">THE EDIT</p><h2>Pieces to <em>keep.</em></h2></div>
-        <p class="section-intro">A small collection of hard-working favorites. Find your new go-to.</p>
-      </div>
+    <section class="shop section" id="shop">
+      <div class="section-head"><div><div class="eyebrow dark-eyebrow">THE GOOD STUFF</div><h2>Find your next <em>favorite.</em></h2></div><p>Everyday essentials. Extraordinary details.</p></div>
       <div class="shop-toolbar">
-        <div class="filters" role="group" aria-label="Filter products">
-          <button class="filter-btn active" data-filter="All">All pieces <span>08</span></button>
-          <button class="filter-btn" data-filter="Clothing">Clothing</button>
-          <button class="filter-btn" data-filter="Accessories">Accessories</button>
-        </div>
-        <label class="search-box"><span>⌕</span><input id="productSearch" type="search" placeholder="Find your piece..." aria-label="Search products"></label>
-        <label class="sort-label">Sort by
-          <select id="sortProducts" aria-label="Sort products">
-            <option value="featured">Featured</option>
-            <option value="low">Price: low to high</option>
-            <option value="high">Price: high to low</option>
-            <option value="name">Name: A to Z</option>
-          </select>
-        </label>
+        <div class="filters" id="filters"><button class="filter active" data-filter="All">All gear <span>08</span></button><button class="filter" data-filter="Audio">Audio</button><button class="filter" data-filter="Wearables">Wearables</button><button class="filter" data-filter="Accessories">Accessories</button></div>
+        <div class="shop-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"></label><select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A–Z</option></select></div>
       </div>
-      <div class="product-grid" id="productGrid" aria-live="polite"></div>
-      <p class="empty-state" id="emptyState" hidden>No pieces found. Try another search.</p>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No gear found</h3><p>Try another search or category.</p><button class="btn btn-dark" id="resetFilters">Reset filters</button></div>
     </section>
 
-    <section class="story-section" id="story">
-      <div class="story-image">
-        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="Warm, minimal clothing boutique interior" loading="lazy">
-        <span class="story-image-label">A SLOWER KIND OF STYLE</span>
-      </div>
-      <div class="story-copy">
-        <p class="eyebrow">A LITTLE ABOUT LUMA</p>
-        <h2>Good clothes.<br><em>Clear conscience.</em></h2>
-        <p>We believe getting dressed should feel simple. So we focus on versatile silhouettes, thoughtful details, and pieces you'll reach for long after the first wear.</p>
-        <a class="text-link" href="#newsletter">A note from us <span>↗</span></a>
-        <div class="story-signature">Wear well, live well. <span>— The LUMA team</span></div>
-      </div>
+    <section class="feature-banner" id="story">
+      <div class="feature-copy"><div class="eyebrow">LESS NOISE. MORE INNOVATION.</div><h2>Technology should<br>feel like <em>magic.</em></h2><p>We believe the best tech doesn't complicate your life. It quietly makes it better. That's why every product in our vault earns its place.</p><a href="#shop" class="btn btn-light">Discover your upgrade <span>↗</span></a></div>
+      <div class="feature-image"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=85" alt="Creative team working with technology"><div class="image-caption"><span>THE TECHVAULT STANDARD</span><b>Curated with purpose.</b></div></div>
     </section>
 
-    <section class="newsletter section-shell" id="newsletter">
-      <div><p class="eyebrow">LETTERS FROM LUMA</p><h2>A little good<br><em>in your inbox.</em></h2></div>
-      <form id="newsletterForm" class="newsletter-form">
-        <label for="emailInput">Occasional notes on new pieces, care tips, and things we love.</label>
-        <div class="email-row"><input id="emailInput" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">↗</button></div>
-        <p class="form-message" id="newsletterMessage" aria-live="polite">No noise. Just the good stuff.</p>
-      </form>
+    <section class="newsletter">
+      <div><div class="eyebrow dark-eyebrow">A LITTLE SIGNAL IN THE NOISE</div><h2>Get the good stuff.</h2><p>New drops, honest recommendations, and subscriber-only perks. No spam, ever.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="emailInput">Email address</label><input type="email" id="emailInput" placeholder="Your email address" required><button class="btn btn-dark" type="submit">Count me in <span>→</span></button><small id="newsletterMessage">By subscribing, you agree to our demo newsletter terms.</small></form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="wordmark footer-wordmark" href="#">luma<span>.</span></a>
-    <p>Everyday, elevated.</p>
-    <div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="mailto:hello@example.com">Contact</a></div>
-    <small>© <span id="year"></span> LUMA Studio. Portfolio demo project.</small>
-  </footer>
+  <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark">T</span> TECHVAULT<span class="brand-dot">.</span></a><p>Good gear. Good energy. Better everyday.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our standard</a><a href="mailto:hello@example.com">Contact</a></div><small>© <span id="year"></span> TechVault. Demo storefront — no real payments are processed.</small></footer>
 
   <div class="overlay" id="overlay"></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
-    <div class="drawer-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="icon-btn close-cart" aria-label="Close shopping bag">✕</button></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head"><div><span class="eyebrow dark-eyebrow">YOUR SELECTION</span><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="close-btn" id="closeCart" aria-label="Close cart">×</button></div>
     <div class="cart-items" id="cartItems"></div>
-    <div class="cart-empty" id="cartEmpty"><span>○</span><h3>Your bag is taking a breather.</h3><p>Find something you'll love wearing.</p><button class="button button-dark continue-shopping">Explore pieces</button></div>
-    <div class="cart-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="button button-dark checkout-btn">Continue to checkout <span>↗</span></button><small>Demo checkout — no payment will be taken.</small></div>
+    <div class="cart-empty" id="cartEmpty"><span>⌁</span><h3>Your bag is taking a break.</h3><p>Add something brilliant to get started.</p><button class="btn btn-dark" id="continueShopping">Explore gear</button></div>
+    <div class="cart-footer" id="cartFooter" hidden><div class="subtotal"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="btn btn-dark checkout-btn" id="checkoutBtn">Continue to checkout <span>→</span></button><small>Secure checkout · Demo only</small></div>
   </aside>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
