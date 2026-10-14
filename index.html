@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#eee8df"><title>ATELIER HOME — Objects for Living</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<div class="topline"><span>Thoughtful design, made to live with.</span><span>Complimentary delivery on orders over $250 ↗</span></div>
+<header class="header">
+<a href="#" class="wordmark">atelier<span>home</span></a>
+<nav id="mainNav"><a href="#shop">Furniture</a><a href="#collections">Collections</a><a href="#journal">Our journal</a><a href="#about">Our philosophy</a></nav>
+<div class="header-right"><button id="openSearch" class="search-link">Search <span>↗</span></button><button id="openCart" class="bag-link">Bag <span id="cartCount">0</span></button><button id="menuToggle" class="menu-toggle" aria-label="Open navigation">☰</button></div>
+</header>
+<main>
+<section class="hero">
+<div class="hero-photo"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1700&q=90" alt="Warm modern living room with natural textures"><div class="photo-stamp">MADE FOR<br>THE EVERYDAY</div></div>
+<div class="hero-note"><span class="eyebrow">THE ART OF SLOW LIVING · VOL. 03</span><h1>Make room<br>for <em>living.</em></h1><p>Furniture with a softer point of view. Natural materials, considered shapes, and pieces that feel like they've always belonged.</p><a class="round-link" href="#shop">Explore the collection <span>↘</span></a><div class="hero-index"><span>01 — 03</span><span>DESIGN THAT FEELS LIKE HOME</span></div></div>
+</section>
+<section class="manifesto" id="about"><span class="manifesto-mark">✳</span><p>We believe a home isn't styled in a day.<br>It's <em>collected over a lifetime.</em></p><span class="manifesto-side">GOOD THINGS TAKE TIME</span></section>
+<section class="shop" id="shop">
+<div class="shop-heading"><div><span class="eyebrow">A FEW THINGS WE LOVE</span><h2>Considered <em>pieces.</em></h2></div><p>Useful, beautiful, and made to stay.<br>Find the piece that feels like you.</p></div>
+<div class="controls"><div class="category-tabs" id="categoryTabs"><button class="active" data-category="All">All pieces</button><button data-category="Seating">Seating</button><button data-category="Tables">Tables</button><button data-category="Lighting">Lighting</button><button data-category="Decor">Objects & decor</button></div><div class="control-right"><input id="searchInput" type="search" placeholder="Find something..." aria-label="Search furniture"><select id="sortSelect" aria-label="Sort products"><option value="featured">Curated order</option><option value="low">Price: low first</option><option value="high">Price: high first</option><option value="name">Name A–Z</option></select></div></div>
+<div class="product-grid" id="productGrid"></div><div class="empty" id="emptyState" hidden><p>Nothing on this shelf just yet.</p><button id="resetFilters">See all pieces ↗</button></div>
+</section>
+<section class="collection-feature" id="collections"><div class="collection-image"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85" alt="Sunlit natural living room"><span>THE SUNDAY COLLECTION</span></div><div class="collection-text"><span class="eyebrow">A LITTLE MORE EXHALE</span><h2>Spaces to slow<br><em>down in.</em></h2><p>Soft edges, honest materials, and colors borrowed from the earth. The Sunday Collection is an invitation to take your time.</p><a class="underline-link" href="#shop">Shop the feeling <span>↗</span></a><div class="collection-number">COLLECTION No. 04 <span>— 2026</span></div></div></section>
+<section class="journal" id="journal"><div class="journal-heading"><span class="eyebrow">NOTES FROM HOME</span><h2>A slower kind of <em>inspiration.</em></h2></div><div class="journal-grid"><article><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" alt="Layered neutral interior"><span>INTERIORS · 5 MIN READ</span><h3>How to make a room feel like you</h3><a href="#about">Read the story ↗</a></article><article><img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=85" alt="Wooden furniture and natural light"><span>MATERIALS · 3 MIN READ</span><h3>A small ode to natural wood</h3><a href="#about">Read the story ↗</a></article><article><img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=800&q=85" alt="Quiet, minimal home corner"><span>RITUALS · 4 MIN READ</span><h3>The beauty of leaving space</h3><a href="#about">Read the story ↗</a></article></div></section>
+<section class="newsletter"><div><span class="eyebrow">A LETTER FROM OUR HOME TO YOURS</span><h2>Room for good things.</h2><p>New collections, considered living, and occasional notes worth opening.</p></div><form id="newsletterForm"><input type="email" id="emailInput" placeholder="Your email address" required aria-label="Email address"><button type="submit">Join the list ↗</button><small id="newsletterMessage">No noise. Just a thoughtful note now and then.</small></form></section>
+</main>
+<footer><a href="#" class="wordmark">atelier<span>home</span></a><p>Objects for living, not just looking.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#journal">Journal</a><a href="mailto:hello@example.com">Contact</a></div><small>© <span id="year"></span> Atelier Home. Portfolio demo — checkout is not connected.</small></footer>
+<div class="veil" id="veil"></div><aside class="cart-panel" id="cartPanel" aria-hidden="true"><div class="panel-head"><div><span class="eyebrow">YOUR LITTLE CORNER</span><h2>Shopping bag <i id="drawerCount">(0)</i></h2></div><button id="closeCart" class="close" aria-label="Close bag">×</button></div><div id="cartItems" class="cart-items"></div><div id="cartEmpty" class="cart-empty"><span>✳</span><h3>A little room for something lovely.</h3><p>Your bag is empty for now.</p><button id="continueShopping">Browse the collection ↗</button></div><div id="cartFooter" class="cart-footer" hidden><div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><p>Delivery and taxes calculated at checkout.</p><button id="checkoutBtn">Continue to checkout ↗</button><small>Demo only · No payment is collected</small></div></aside>
+<div class="toast" id="toast" role="status"></div>
+</body></html>
